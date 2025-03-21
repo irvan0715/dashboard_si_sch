@@ -43,7 +43,7 @@
                             </div>
                             <div class="col col-stats ms-3 ms-sm-0">
                                 <div class="numbers">
-                                    <p class="card-category">Subscribers</p>
+                                    <p class="card-category">Nilai Rata-rata</p>
                                     <h4 class="card-title">1303</h4>
                                 </div>
                             </div>
@@ -62,7 +62,7 @@
                             </div>
                             <div class="col col-stats ms-3 ms-sm-0">
                                 <div class="numbers">
-                                    <p class="card-category">Sales</p>
+                                    <p class="card-category">Kehadiran Siswa</p>
                                     <h4 class="card-title">$ 1,345</h4>
                                 </div>
                             </div>

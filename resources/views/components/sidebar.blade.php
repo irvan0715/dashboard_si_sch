@@ -148,6 +148,87 @@
                         </ul>
                     </div>
                 </li>
+                {{-- admin --}}
+                <li class="nav-item">
+                    <a href="#">
+                        <i class="fas fa-users"></i>
+                        <p>Daftar guru</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a data-bs-toggle="collapse" href="#evaluasiadmin">
+                        <i class="far fa-folder-open"></i>
+                        <p>Evaluasi</p>
+                        <span class="caret"></span>
+                    </a>
+                    <div class="collapse" id="evaluasiadmin">
+                        <ul class="nav nav-collapse">
+                            <li>
+                                <a href="#">
+                                    <span class="sub-item">Jadwal evaluasi</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="sub-item">Observasi</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="sub-item">Data evaluasi</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="sub-item">Rubrik</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="sub-item">Umpan balik</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="#">
+                        <i class="fas fa-book-open"></i>
+                        <p>Pengembangan</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#">
+                        <i class="fas fa-columns"></i>
+                        <p>Manajemen user</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a data-bs-toggle="collapse" href="#data">
+                        <i class="fas fa-clipboard-list"></i>
+                        <p>Data</p>
+                        <span class="caret"></span>
+                    </a>
+                    <div class="collapse" id="data">
+                        <ul class="nav nav-collapse">
+                            <li>
+                                <a href="#">
+                                    <span class="sub-item">Data nilai</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="sub-item">Data evaluasi guru</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="sub-item">Data rapot</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
             </ul>
             {{-- end navbar --}}
         </div>
