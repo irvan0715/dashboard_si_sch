@@ -33,9 +33,11 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/css/plugins.min.css" />
     <link rel="stylesheet" href="assets/css/kaiadmin.min.css" />
+    <link rel="stylesheet" href="assets/css/kaiadmin.css" />
 
     <!-- CSS Just for demo purpose, don't include it in your project -->
     <link rel="stylesheet" href="assets/css/demo.css" />
+
 </head>
 
 <body>
@@ -80,11 +82,50 @@
     <script src="assets/js/plugin/sweetalert/sweetalert.min.js"></script>
 
     <!-- Kaiadmin JS -->
+    <script src="assets/js/kaiadmin.js"></script>
     <script src="assets/js/kaiadmin.min.js"></script>
 
-    <!-- Kaiadmin DEMO methods, don't include it in your project! -->
-    <script src="assets/js/setting-demo.js"></script>
-    <script src="assets/js/demo.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navItems = document.querySelectorAll('.nav-item');
+            const currentUrl = window.location.href;
+
+            navItems.forEach(item => {
+                const link = item.querySelector('a[data-bs-toggle="collapse"]'); // Select the toggle link
+                const collapseDiv = item.querySelector('.collapse');
+                const subLinks = item.querySelectorAll('.nav-collapse a'); // Select submenu links
+
+                subLinks.forEach(subLink => {
+                    const href = subLink.getAttribute('href');
+                    const li = subLink.parentElement;
+
+                    if (currentUrl === href) {
+                        li.classList.add('active');
+                        item.classList.add('active', 'submenu'); // Add classes to parent nav-item
+                        if (collapseDiv) {
+                            collapseDiv.classList.add('show');
+                            if (link) {
+                                link.setAttribute('aria-expanded', 'true');
+                            }
+                        }
+                    }
+                });
+
+                // Handle the case where the parent nav-item is active but none of the submenu links are.
+                if (item.querySelector('.nav-collapse li.active')) {
+                    item.classList.add('active', 'submenu');
+                    if (collapseDiv) {
+                        collapseDiv.classList.add('show');
+                        if (link) {
+                            link.setAttribute('aria-expanded', 'true');
+                        }
+                    }
+
+                }
+
+            });
+        });
+    </script>
 </body>
 
 </html>
